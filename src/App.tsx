@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Layout } from './pages';
+import pages from './data/pages';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* 0 to get home/root page url */}
+        <Route path={pages[0].url} element={<Layout />}>
+          {/* iterate whole pages */}
+          {pages.map((item, index) => {
+            if (index === 0) {
+              return <Route index element={item.element} key={index} />;
+            }
+            return <Route path={item.url} element={item.element} key={index} />;
+          })}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
