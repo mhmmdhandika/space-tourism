@@ -6,7 +6,7 @@
 
 @layer base {
   * {
-    @apply text-white/80;
+    @apply text-white/90;
   }
 
   html,

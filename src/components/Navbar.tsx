@@ -7,7 +7,7 @@ import pages from '../data/pages';
 
 function Navbar() {
   const location = useLocation();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const handleSidebar = (): void => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -20,31 +20,31 @@ function Navbar() {
           <Logo />
         </div>
         <button
-          className={`${!isSidebarOpen && 'hidden'} pr-12`}
+          className={`${isSidebarOpen && 'hidden'} pr-12`}
           onClick={handleSidebar}
         >
           <IconHamburger />
         </button>
         <ul
           className={`${
-            isSidebarOpen && 'hidden'
-          } absolute top-0 right-0 bg-opacity-80 backdrop-blur-[30px] h-default w-[65%] pr-10 flex flex-col gap-y-5 text-white sm:static sm:w-fit sm:flex-row sm:bg-none sm:backdrop-blur-none sm:justify-end sm:pr-10 sm:gap-x-10 sm:h-fit sm:bg-white/[0.09]`}
+            !isSidebarOpen && 'hidden'
+          } absolute top-0 right-0 bg-opacity-80 backdrop-blur-[30px] h-default w-[65%] pr-10 flex flex-col gap-y-5 text-white sm:text-nav-text sm:static sm:w-fit sm:flex-row sm:bg-none sm:backdrop-blur-sm sm:justify-end sm:px-10 sm:gap-x-16 sm:h-fit sm:bg-white/[0.06] lg:gap-x-24 lg:px-24`}
         >
           <button className='self-end mb-14 sm:hidden' onClick={handleSidebar}>
             <IconClose />
           </button>
           {pages.map((item, index) => {
             return (
-              <li key={index} className={`${index === 0 && 'pl-10'} sm:py-9`}>
-                <span className='font-bold mr-3 sm:hidden'>{`0${index}`}</span>
-                <Link
-                  to={item.url}
-                  className={`sm:border-b-4 sm:pb-8 ${
-                    location.pathname === item.url
-                      ? 'sm:border-white'
-                      : 'sm:border-transparent sm:hover:border-white/30'
-                  }`}
-                >
+              <li
+                key={index}
+                className={`${
+                  location.pathname === item.url
+                    ? 'sm:border-white'
+                    : 'sm:border-transparent sm:hover:border-white/30'
+                } sm:py-9 sm:border-b-4`}
+              >
+                <span className='font-bold mr-3 sm:hidden lg:inline'>{`0${index}`}</span>
+                <Link to={item.url} className={`8 `}>
                   {item.name}
                 </Link>
               </li>
