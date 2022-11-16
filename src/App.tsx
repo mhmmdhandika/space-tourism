@@ -10,10 +10,14 @@ function App() {
         <Route path={'/'} element={<Layout />}>
           {pages.map(item => {
             if (item.url === '/') {
-              return <Route index element={item.element} key={item.name} />;
+              return <Route index element={<item.element />} key={item.name} />;
             }
             return (
-              <Route path={item.url} element={item.element} key={item.name} />
+              <Route
+                path={item.url}
+                element={<item.element />}
+                key={item.name}
+              />
             );
           })}
           <Route path='*' element={<NotFound />} />

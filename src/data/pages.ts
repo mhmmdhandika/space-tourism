@@ -4,22 +4,22 @@ const pages = [
   {
     name: 'Home',
     url: '/',
-    element: <Home />,
+    element: Home,
   },
   {
     name: 'Destination',
     url: '/destination',
-    element: <Destination />,
+    element: Destination,
   },
   {
     name: 'Crew',
     url: '/crew',
-    element: <Crew />,
+    element: Crew,
   },
   {
     name: 'Tech',
     url: '/tech',
-    element: <Tech />,
+    element: Tech,
   },
 ];
 

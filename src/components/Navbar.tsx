@@ -7,7 +7,7 @@ import pages from '../data/pages';
 
 function Navbar() {
   const location = useLocation();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleSidebar = (): void => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <header className='fixed top-0 w-full font-barlow-condensed uppercase text-xl'>
-      <div className='flex justify-between items-center h-full'>
+      <div className='flex justify-between items-center h-full py-7 sm:py-0'>
         <div className='pl-12'>
           <Logo />
         </div>
@@ -29,7 +29,7 @@ function Navbar() {
           <ul
             className={`${
               !isSidebarOpen && 'hidden'
-            } absolute top-0 right-0 bg-opacity-80 backdrop-blur-[30px] h-md w-[65%] pr-10 flex flex-col gap-y-5 text-white sm:text-nav-text sm:static sm:w-fit sm:flex-row sm:bg-none sm:backdrop-blur-sm sm:justify-end sm:px-10 sm:gap-x-16 sm:h-fit sm:bg-white/[0.06] lg:gap-x-24 lg:px-24`}
+            } absolute top-0 right-0 p-10 bg-opacity-80 backdrop-blur-[30px] h-md w-[65%] pr-10 flex flex-col gap-y-5 text-white sm:text-nav-text sm:p-0 sm:static sm:w-fit sm:flex-row sm:bg-none sm:backdrop-blur-sm sm:justify-end sm:px-10 sm:gap-x-7 sm:h-fit sm:bg-white/[0.06] lg:gap-x-24 lg:px-24`}
           >
             <button
               className='self-end mb-14 sm:hidden'

@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       height: {
         base: '100vh',
-        md: '130vh',
+        md: '150vh',
       },
       colors: {
         primary: '#0b0d17',

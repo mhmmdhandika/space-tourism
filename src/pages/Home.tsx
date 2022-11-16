@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <main className='component-space h-md bg-home-mobile bg-no-repeat bg-cover bg-center font-barlow text-center flex flex-col justify-center items-center sm:bg-home-tablet lg:bg-home-desktop lg:h-base lg:flex-row lg:text-start lg:gap-x-20'>
+    <main className='component bg-home-mobile sm:bg-home-tablet lg:bg-home-desktop'>
       <article className='w-[90%] lg:w-[60%]'>
         <h5 className='font-barlow-condensed text-xl tracking-widest uppercase'>
           So, you want to travel to

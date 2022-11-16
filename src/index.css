@@ -15,6 +15,12 @@
   }
 }
 
+@layer components {
+  .component {
+    @apply component-space h-md bg-no-repeat bg-cover bg-center font-barlow text-center flex flex-col justify-center items-center lg:h-base lg:flex-row lg:text-start lg:gap-x-20;
+  }
+}
+
 .component-space {
-  @apply px-9 pb-14 pt-44 lg:px-36;
+  @apply px-9 pb-14 pt-44 lg:px-44;
 }
