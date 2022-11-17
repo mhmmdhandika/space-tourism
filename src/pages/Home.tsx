@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Home() {
   return (
     <main className='component bg-home-mobile sm:bg-home-tablet lg:bg-home-desktop'>
@@ -14,9 +16,12 @@ function Home() {
           and relax because we'll give you a truly out of this world experience!
         </p>
       </article>
-      <button className='mt-16 bg-white font-bellefair uppercase rounded-full text-primary text-2xl h-44 w-44 hover:outline hover:outline-[30px] hover:outline-slate-500/70 sm:w-52 sm:h-52 lg:w-60 lg:h-60'>
+      <Link
+        to='/destination'
+        className='flex items-center justify-center mt-16 bg-white font-bellefair uppercase rounded-full text-primary text-2xl h-44 w-44 hover:outline hover:outline-[30px] hover:outline-slate-500/70 sm:w-52 sm:h-52 lg:w-60 lg:h-60'
+      >
         Explore
-      </button>
+      </Link>
     </main>
   );
 }

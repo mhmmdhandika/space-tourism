@@ -14,7 +14,7 @@ function Navbar() {
   };
 
   return (
-    <header className='fixed top-0 w-full font-barlow-condensed uppercase text-xl'>
+    <header className='fixed z-[2] top-0 w-full font-barlow-condensed uppercase text-xl'>
       <div className='flex justify-between items-center h-full py-7 sm:py-0'>
         <div className='pl-12'>
           <Logo />
