@@ -1,4 +1,4 @@
-import { Home, Destination, Crew, Tech } from '../pages';
+import { Home, Destination, Crew, Technology } from '../pages';
 
 const pages = [
   {
@@ -17,9 +17,9 @@ const pages = [
     element: Crew,
   },
   {
-    name: 'Tech',
-    url: '/tech',
-    element: Tech,
+    name: 'Technology',
+    url: '/technology',
+    element: Technology,
   },
 ];
 

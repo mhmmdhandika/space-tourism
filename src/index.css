@@ -19,6 +19,30 @@
   .component {
     @apply component-space h-md bg-no-repeat bg-cover bg-center font-barlow text-center flex flex-col justify-center items-center lg:h-base lg:flex-row lg:text-start lg:gap-x-20;
   }
+
+  .bg-component {
+    @apply bg-no-repeat bg-cover bg-center;
+  }
+
+  .title-component {
+    @apply uppercase font-barlow-condensed text-xl tracking-widest lg:text-3xl;
+  }
+
+  .title-component span {
+    @apply font-bold text-white/40;
+  }
+
+  .title-1-article-component {
+    @apply font-bellefair uppercase text-lg text-white/60 mb-1 sm:text-xl lg:text-2xl;
+  }
+
+  .title-2-article-component {
+    @apply font-bellefair uppercase text-2xl sm:text-4xl lg:text-6xl;
+  }
+
+  .desc-article-component {
+    @apply mt-4 font-barlow text-white/80 lg:text-lg;
+  }
 }
 
 .component-space {
