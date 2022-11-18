@@ -10,7 +10,7 @@ function Technolgy() {
       <h1 className='title-component lg:col-span-2 lg:place-self-start'>
         <span>03</span> Space launch 101
       </h1>
-      <picture className='col-start-3 row-start-2'>
+      <picture className='lg:col-start-3 lg:row-start-2'>
         <source
           srcSet={technology[choosedTerminology].images.portrait}
           media='(min-width: 1024px)'
